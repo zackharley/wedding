@@ -10,7 +10,7 @@ export default function Home() {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      sx={{ height: '100dvh', position: 'relative' }}
+      sx={{ height: '100dvh', position: 'relative', py: 4, px: 3 }}
     >
       <Box
         sx={{
