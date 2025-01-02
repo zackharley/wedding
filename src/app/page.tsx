@@ -1,101 +1,118 @@
+import { Box, Typography } from '@mui/material';
+import flowerDecoration from './img/flower-decoration.svg';
+import mobilePattern from './img/mobile-pattern.svg';
 import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <Box
+      component="main"
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      sx={{ height: '100vh', position: 'relative' }}
+    >
+      <Box
+        sx={{
+          height: '100%',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          zIndex: -1,
+        }}
+      >
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src={mobilePattern}
+          alt="Floral pattern graphic"
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: 'cover',
+          }}
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{' '}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </Box>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        sx={{ height: '100vh', maxHeight: '37.5rem', textAlign: 'center' }}
+      >
+        <Typography
+          component="h1"
+          fontSize="3rem"
+          lineHeight="3rem"
+          letterSpacing="0.2rem"
+          color="primary.contrastText"
+        >
+          SAVE
+          <br />
+          <Typography
+            component="span"
+            fontFamily="kingstonSignature, serif"
+            fontSize="2rem"
+            lineHeight="2rem"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+            the
+          </Typography>
+          <br />
+          DATE
+        </Typography>
+        <Box
+          sx={{
+            backgroundColor: 'primary.contrastText',
+            flexGrow: 1,
+            my: 4,
+            width: '0.125rem',
+          }}
+        />
+        <Typography
+          color="primary.contrastText"
+          fontSize="1.5rem"
+          lineHeight="1.5rem"
+          letterSpacing="0.15rem"
+          sx={{ mb: 1 }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          KAITLYN & ZACK
+        </Typography>
+        <Typography
+          color="primary.contrastText"
+          fontSize="0.875rem"
+          lineHeight="0.875rem"
+          letterSpacing="0.0875rem"
+          sx={{ mb: 4 }}
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          ARE GETTING MARRIED
+        </Typography>
+        <Typography
+          color="primary.contrastText"
+          fontSize="3rem"
+          lineHeight="3rem"
+          letterSpacing="0.3rem"
+          sx={{ mb: 6.5 }}
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          09 13 25
+        </Typography>
+        <Typography
+          color="primary.contrastText"
+          fontSize="0.875rem"
+          lineHeight="0.875rem"
+          letterSpacing="0.0875rem"
+          sx={{ mb: 4 }}
+        >
+          STONECROP ACRES / MORRISBURG ON
+        </Typography>
+        <Image src={flowerDecoration} alt="Flower decoration graphic" />
+        <Typography
+          color="primary.contrastText"
+          fontSize="0.6875rem"
+          lineHeight="0.6875rem"
+          letterSpacing="0.06875rem"
+          sx={{ mt: 4 }}
+        >
+          FORMAL INVITATION TO FOLLOW
+        </Typography>
+      </Box>
+    </Box>
   );
 }
