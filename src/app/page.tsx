@@ -10,7 +10,7 @@ export default function Home() {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      sx={{ height: '100vh', position: 'relative' }}
+      sx={{ height: '100dvh', position: 'relative' }}
     >
       <Box
         sx={{
@@ -36,7 +36,7 @@ export default function Home() {
         display="flex"
         flexDirection="column"
         alignItems="center"
-        sx={{ height: '100vh', maxHeight: '37.5rem', textAlign: 'center' }}
+        sx={{ height: '100%', maxHeight: '37.5rem', textAlign: 'center' }}
       >
         <Typography
           component="h1"
