@@ -10,7 +10,10 @@ export default function Home() {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      sx={{ position: 'relative' }}
+      sx={{
+        minHeight: '100dvh',
+        position: 'relative',
+      }}
     >
       <Box
         sx={{
