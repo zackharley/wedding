@@ -10,7 +10,7 @@ export default function Home() {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      sx={{ height: '100dvh', position: 'relative' }}
+      sx={{ position: 'relative' }}
     >
       <Box
         sx={{
@@ -97,7 +97,7 @@ export default function Home() {
           letterSpacing="0.3rem"
           sx={{ mb: 6.5 }}
         >
-          09 13 25
+          09∙13∙25
         </Typography>
         <Typography
           color="primary.contrastText"
