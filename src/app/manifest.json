@@ -1,6 +1,8 @@
 {
   "name": "Harley Ever After Wedding",
+  "description": "Kaitlyn and Zackery's wedding website",
   "short_name": "K + Z",
+  "start_url": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
