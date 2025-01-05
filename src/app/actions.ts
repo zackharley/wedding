@@ -8,7 +8,8 @@ webpush.setVapidDetails(
   process.env.VAPID_PRIVATE_KEY!,
 );
 
-let subscription: PushSubscription | null = null;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let subscription: any = null;
 
 export async function subscribeUser(sub: PushSubscription) {
   subscription = sub;
