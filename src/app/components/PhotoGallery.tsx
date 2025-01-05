@@ -71,7 +71,7 @@ const imagesByColumn = galleryImages.reduce((acc, img, index) => {
 
 const gapSize = 1;
 
-export default function Gallery() {
+export default function PhotoGallery() {
   return (
     <Box
       display="flex"

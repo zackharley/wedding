@@ -2,7 +2,9 @@ import { Box, Container, Typography } from '@mui/material';
 import flowerDecoration from './img/flower-decoration.svg';
 import mobilePattern from './img/mobile-pattern.svg';
 import Image from 'next/image';
-import Gallery from './components/gallery';
+import PhotoGallery from './components/PhotoGallery';
+import InstallPrompt from './components/InstallPrompt';
+import PushNotificationManager from './components/PushNotificationManager';
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
         position: 'relative',
       }}
     >
+      <PushNotificationManager />
+      <InstallPrompt />
       <Box
         sx={{
           height: '100%',
@@ -42,7 +46,7 @@ export default function Home() {
             maxWidth: { xs: '100%', md: '50%' },
           }}
         >
-          <Gallery />
+          <PhotoGallery />
         </Box>
         <Box
           display="flex"
