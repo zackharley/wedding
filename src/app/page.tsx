@@ -92,7 +92,7 @@ export default function Home() {
             letterSpacing="0.15rem"
             sx={{ mb: 1 }}
           >
-            KAITLYN & ZACK
+            KAITLYN & ZACKERY
           </Typography>
           <Typography
             color="primary.contrastText"
