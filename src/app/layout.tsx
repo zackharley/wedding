@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import ThemeProviderWrapper from './components/ThemeProviderWrapper';
+import ThemeProviderWrapper from '../components/ThemeProviderWrapper';
 import { Box } from '@mui/material';
 import './global.css';
 

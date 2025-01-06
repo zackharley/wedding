@@ -1,8 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { subscribeUser, unsubscribeUser, sendNotification } from '../actions';
-import { urlBase64ToUint8Array } from '../utils/url-base64-to-uint8-array';
+import {
+  subscribeUser,
+  unsubscribeUser,
+  sendNotification,
+} from '../app/actions';
+import { urlBase64ToUint8Array } from '../app/utils/url-base64-to-uint8-array';
 
 export default function PushNotificationManager() {
   const [isSupported, setIsSupported] = useState(false);
