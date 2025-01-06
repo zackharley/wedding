@@ -1,43 +1,14 @@
 import { Box, Container, Typography } from '@mui/material';
 import flowerDecoration from './img/flower-decoration.svg';
-import mobilePattern from './img/mobile-pattern.svg';
 import Image from 'next/image';
 import PhotoGallery from './components/PhotoGallery';
+import FloralWrapper from '@/components/FloralWrapper';
 // import InstallPrompt from './components/InstallPrompt';
 // import PushNotificationManager from './components/PushNotificationManager';
 
 export default function Home() {
   return (
-    <Box
-      component="main"
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-      sx={{
-        minHeight: '100dvh',
-        position: 'relative',
-      }}
-    >
-      {/* <PushNotificationManager />
-      <InstallPrompt /> */}
-      <Box
-        sx={{
-          height: '100%',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          zIndex: -1,
-        }}
-      >
-        <Image
-          src={mobilePattern}
-          alt="Floral pattern graphic"
-          fill
-          sizes="100vw"
-          style={{ objectFit: 'cover' }}
-        />
-      </Box>
+    <FloralWrapper>
       <Container sx={{ display: 'flex', alignItems: 'center' }}>
         <Box
           sx={{
@@ -137,6 +108,6 @@ export default function Home() {
           </Typography>
         </Box>
       </Container>
-    </Box>
+    </FloralWrapper>
   );
 }
