@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import ThemeProviderWrapper from '../components/ThemeProviderWrapper';
 import { Box } from '@mui/material';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import './global.css';
 
 const kingstonSignature = localFont({
@@ -38,6 +39,7 @@ export default function RootLayout({
         >
           {children}
           <Analytics />
+          <SpeedInsights />
         </Box>
       </ThemeProviderWrapper>
     </html>
