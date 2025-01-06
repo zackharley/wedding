@@ -1,7 +1,14 @@
-import { Typography } from '@mui/material';
+import FloralWrapper from '@/components/FloralWrapper';
+import { Button, Typography } from '@mui/material';
+import Link from 'next/link';
 
 export default function OnlinePage() {
   return (
-    <Typography variant="h1">This page is only available online</Typography>
+    <FloralWrapper>
+      <Typography variant="h1">This page is only available online</Typography>
+      <Link href="/" passHref>
+        <Button>Go Home</Button>
+      </Link>
+    </FloralWrapper>
   );
 }

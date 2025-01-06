@@ -1,5 +1,6 @@
 import FloralWrapper from '@/components/FloralWrapper';
 import { Button, Container, Typography } from '@mui/material';
+import Link from 'next/link';
 
 export default function NotFound() {
   return (
@@ -29,9 +30,11 @@ export default function NotFound() {
           again.
         </Typography>
 
-        <Button href="/" color="darkOrange" variant="contained" sx={{ mt: 8 }}>
-          Take me home
-        </Button>
+        <Link href="/" passHref>
+          <Button color="darkOrange" variant="contained" sx={{ mt: 8 }}>
+            Take me home
+          </Button>
+        </Link>
       </Container>
     </FloralWrapper>
   );
