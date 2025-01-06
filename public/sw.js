@@ -1,3 +1,8 @@
+const version = '0.1.0';
+
+// log version name on launch
+console.log('Service Worker version:', version);
+
 self.addEventListener('push', function (event) {
   if (event.data) {
     const data = event.data.json();
