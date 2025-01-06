@@ -3,8 +3,8 @@ import flowerDecoration from './img/flower-decoration.svg';
 import mobilePattern from './img/mobile-pattern.svg';
 import Image from 'next/image';
 import PhotoGallery from './components/PhotoGallery';
-import InstallPrompt from './components/InstallPrompt';
-import PushNotificationManager from './components/PushNotificationManager';
+// import InstallPrompt from './components/InstallPrompt';
+// import PushNotificationManager from './components/PushNotificationManager';
 
 export default function Home() {
   return (
@@ -18,8 +18,8 @@ export default function Home() {
         position: 'relative',
       }}
     >
-      <PushNotificationManager />
-      <InstallPrompt />
+      {/* <PushNotificationManager />
+      <InstallPrompt /> */}
       <Box
         sx={{
           height: '100%',
