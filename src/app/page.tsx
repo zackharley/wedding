@@ -3,7 +3,6 @@ import flowerDecoration from './img/flower-decoration.svg';
 import Image from 'next/image';
 import PhotoGallery from './components/PhotoGallery/PhotoGallery';
 import FloralWrapper from '@/components/FloralWrapper';
-import Link from 'next/link';
 // import InstallPrompt from './components/InstallPrompt';
 // import PushNotificationManager from './components/PushNotificationManager';
 
