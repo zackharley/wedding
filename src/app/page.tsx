@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from '@mui/material';
 import flowerDecoration from './img/flower-decoration.svg';
 import Image from 'next/image';
-import PhotoGallery from './components/PhotoGallery';
+import PhotoGallery from './components/PhotoGallery/PhotoGallery';
 import FloralWrapper from '@/components/FloralWrapper';
 import Link from 'next/link';
 // import InstallPrompt from './components/InstallPrompt';
