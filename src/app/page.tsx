@@ -105,7 +105,7 @@ export default function Home() {
             letterSpacing="0.06875rem"
             sx={{ mt: 4 }}
           >
-            <Link href="/online">FORMAL INVITATION TO FOLLOW</Link>
+            FORMAL INVITATION TO FOLLOW
           </Typography>
         </Box>
       </Container>
