@@ -6,7 +6,7 @@ import {
   unsubscribeUser,
   sendNotification,
 } from '../app/actions';
-import { urlBase64ToUint8Array } from '../app/utils/url-base64-to-uint8-array';
+import { urlBase64ToUint8Array } from '../lib/url-base64-to-uint8-array';
 
 export default function PushNotificationManager() {
   const [isSupported, setIsSupported] = useState(false);

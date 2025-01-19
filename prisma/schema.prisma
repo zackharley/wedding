@@ -1,0 +1,177 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Event {
+  id          Int       @id @default(autoincrement())
+  name        String
+  description String?
+  startTime   DateTime  @map("start_time")
+  endTime     DateTime  @map("end_time")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  
+  // Relations
+  eventRoles  EventRole[]
+  eventRsvps  EventRsvp[]
+  subEvents   SubEvent[]
+
+  @@map("events")
+}
+
+model EventRole {
+  id        Int      @id @default(autoincrement())
+  eventId   Int      @map("event_id")
+  roleId    Int      @map("role_id")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  event     Event    @relation(fields: [eventId], references: [id])
+  role      Role     @relation(fields: [roleId], references: [id])
+
+  @@map("event_roles")
+}
+
+model EventRsvp {
+  id        Int      @id @default(autoincrement())
+  guestId   Int      @map("guest_id")
+  eventId   Int      @map("event_id")
+  status    String?
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  guest     Guest    @relation(fields: [guestId], references: [id])
+  event     Event    @relation(fields: [eventId], references: [id])
+
+  @@map("event_rsvps")
+}
+
+model Guest {
+  id                      Int       @id @default(autoincrement())
+  firstName              String    @map("first_name")
+  lastName               String    @map("last_name")
+  email                  String?
+  phoneNumber            String?   @map("phone_number")
+  dietaryRestrictions    String[]  @map("dietary_restrictions") @default([])
+  otherDietaryRestriction String?  @map("other_dietary_restriction")
+  location               String?
+  partyId                Int?      @map("party_id")
+  magicLinkToken         String?   @map("magic_link_token")
+  tokenGeneratedAt       DateTime? @map("token_generated_at")
+  createdAt              DateTime  @default(now()) @map("created_at")
+  updatedAt              DateTime  @updatedAt @map("updated_at")
+
+  // Relations
+  party                  Party?    @relation(fields: [partyId], references: [id])
+  guestRoles             GuestRole[]
+  eventRsvps             EventRsvp[]
+
+  @@map("guests")
+}
+
+model GuestRole {
+  id        Int      @id @default(autoincrement())
+  guestId   Int      @map("guest_id")
+  roleId    Int      @map("role_id")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  guest     Guest    @relation(fields: [guestId], references: [id])
+  role      Role     @relation(fields: [roleId], references: [id])
+
+  @@map("guest_roles")
+}
+
+model LocalRecommendation {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String?
+  address     String?
+  websiteUrl  String?  @map("website_url")
+  phone       String?
+  priceLevel  Decimal? @map("price_level")
+  category    Int?
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("local_recommendations")
+}
+
+model Party {
+  id        Int      @id @default(autoincrement())
+  name      String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  guests    Guest[]
+  roles     Role[]
+
+  @@map("parties")
+}
+
+model Role {
+  id          Int      @id @default(autoincrement())
+  name        String
+  subEventId  Int?     @map("sub_event_id")
+  partyId     Int?     @map("party_id")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  subEvent    SubEvent? @relation(fields: [subEventId], references: [id])
+  party       Party?    @relation(fields: [partyId], references: [id])
+  eventRoles  EventRole[]
+  guestRoles  GuestRole[]
+  subEventRoles SubEventRole[]
+
+  @@map("roles")
+}
+
+model SubEvent {
+  id          Int      @id @default(autoincrement())
+  eventId     Int      @map("event_id")
+  name        String
+  description String?
+  startTime   DateTime @map("start_time")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  event       Event    @relation(fields: [eventId], references: [id])
+  roles       Role[]
+  subEventRoles SubEventRole[]
+
+  @@map("sub_events")
+}
+
+model SubEventRole {
+  id          Int      @id @default(autoincrement())
+  subEventId  Int      @map("sub_event_id")
+  roleId      Int      @map("role_id")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  subEvent    SubEvent @relation(fields: [subEventId], references: [id])
+  role        Role     @relation(fields: [roleId], references: [id])
+
+  @@map("sub_event_roles")
+}
