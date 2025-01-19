@@ -22,7 +22,7 @@ export function generateICS(event: Event) {
           name: 'Kaitlyn Russell and Zackery Harley',
           email: 'hello@harleyeverafter.com',
         },
-        url: `${process.env.NEXT_PUBLIC_BASE_URL}/events/${event.id}`,
+        url: `https://harleyeverafter.com/events/${event.id}`,
         sequence: 0, // Increment this when event is updated
         status: ICalEventStatus.CONFIRMED,
       },
