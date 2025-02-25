@@ -63,9 +63,9 @@ export const theme = createTheme({
   },
   typography: {
     allVariants: {
-      color: '#F5EAE1',
+      color: '#13322C',
     },
-    fontFamily: 'Marcellus SC, serif',
+    fontFamily: 'marcellus, sans-serif',
   },
 });
 

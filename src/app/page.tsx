@@ -3,12 +3,10 @@ import flowerDecoration from './img/flower-decoration.svg';
 import Image from 'next/image';
 import PhotoGallery from './components/PhotoGallery/PhotoGallery';
 import FloralWrapper from '@/components/FloralWrapper';
-// import InstallPrompt from './components/InstallPrompt';
-// import PushNotificationManager from './components/PushNotificationManager';
 
 export default function Home() {
   return (
-    <FloralWrapper>
+    <FloralWrapper justifyContent="center" showFooter={false}>
       <Container sx={{ display: 'flex', alignItems: 'center' }}>
         <Box
           sx={{
@@ -46,6 +44,7 @@ export default function Home() {
               fontFamily="kingstonSignature, serif"
               fontSize="2rem"
               lineHeight="2rem"
+              color="primary.contrastText"
             >
               the
             </Typography>
