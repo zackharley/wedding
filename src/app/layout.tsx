@@ -35,7 +35,6 @@ export default function RootLayout({
         <Box
           component="body"
           className={`${marcellus.className} ${kingstonSignature.className} antialiased`}
-          sx={{ backgroundColor: 'primary.main' }}
         >
           {children}
           <Analytics />

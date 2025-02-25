@@ -1,12 +1,23 @@
-import { Box } from '@mui/material';
+'use client';
+
+import { Box, GlobalStyles } from '@mui/material';
 import Image from 'next/image';
 import type { PropsWithChildren } from 'react';
-import mobilePattern from '../img/mobile-pattern.svg';
-import desktopPattern from '../img/desktop-pattern.svg';
+import mobilePatternDark from '../img/mobile-pattern-dark.svg';
+import mobilePatternLight from '../img/mobile-pattern-light.svg';
+import desktopPatternDark from '../img/desktop-pattern-dark.svg';
+import desktopPatternLight from '../img/desktop-pattern-light.svg';
+
+type FloralWrapperProps = Readonly<
+  PropsWithChildren<{
+    variant?: 'dark' | 'light';
+  }>
+>;
 
 export default function FloralWrapper({
   children,
-}: Readonly<PropsWithChildren>) {
+  variant = 'dark',
+}: FloralWrapperProps) {
   return (
     <Box
       component="main"
@@ -18,6 +29,15 @@ export default function FloralWrapper({
         position: 'relative',
       }}
     >
+      <GlobalStyles
+        styles={(theme) => ({
+          body: {
+            backgroundColor:
+              variant === 'light' ? '#FBF8F7' : theme.palette.primary.main,
+            margin: 0,
+          },
+        })}
+      />
       {/* <PushNotificationManager />
       <InstallPrompt /> */}
       <Box
@@ -32,7 +52,7 @@ export default function FloralWrapper({
       >
         <Box sx={{ display: { xs: 'none', md: 'block' } }}>
           <Image
-            src={desktopPattern}
+            src={variant === 'light' ? desktopPatternLight : desktopPatternDark}
             alt="Floral pattern graphic"
             fill
             sizes="100vw"
@@ -41,7 +61,7 @@ export default function FloralWrapper({
         </Box>
         <Box sx={{ display: { xs: 'block', md: 'none' } }}>
           <Image
-            src={mobilePattern}
+            src={variant === 'light' ? mobilePatternLight : mobilePatternDark}
             alt="Floral pattern graphic"
             fill
             sizes="100vw"
