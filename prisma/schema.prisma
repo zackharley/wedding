@@ -150,9 +150,10 @@ model SubEvent {
   eventId     Int      @map("event_id")
   name        String
   description String?
-  startTime   DateTime @map("start_time")
-  createdAt   DateTime @default(now()) @map("created_at")
-  updatedAt   DateTime @updatedAt @map("updated_at")
+  startTime   DateTime  @map("start_time")
+  endTime     DateTime? @map("end_time")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
 
   // Relations
   event       Event    @relation(fields: [eventId], references: [id])
