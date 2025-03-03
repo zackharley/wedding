@@ -41,6 +41,7 @@ export default function FloralWrapper({
         sx={{
           minHeight: '100dvh',
           position: 'relative',
+          alignItems: { xs: 'normal', md: 'center' },
         }}
       >
         {title && <Hero title={title} subtitle={subtitle} />}
@@ -77,7 +78,9 @@ export default function FloralWrapper({
             aria-hidden="true"
           />
         </Box>
-        <Box sx={{ flexGrow: 1 }}>{children}</Box>
+        <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+          {children}
+        </Box>
         {showFooter && <Footer />}
       </Box>
       <GlobalStyles

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Box, Typography, Container } from '@mui/material';
 import HeroImage from '../img/hero-img.webp';
+import Navbar from './Navbar';
 
 interface HeroProps {
   title?: string;
@@ -66,7 +67,6 @@ export default function Hero({
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
           alignItems: {
             xs: 'center', // Center on mobile
             md: 'flex-start', // Left aligned on desktop
@@ -76,35 +76,45 @@ export default function Hero({
             md: 'left', // Left aligned on desktop
           },
           color: 'white',
-          pt: 4,
           pb: 4,
         }}
       >
-        <Typography
-          variant="h2"
-          component="h1"
-          color="primary.contrastText"
+        <Navbar />
+        <Box
           sx={{
-            fontFamily: 'kingstonSignature, serif',
-            fontSize: '1.5rem',
-            fontWeight: 'bold',
-            letterSpacing: '0.2em',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flex: 1,
           }}
         >
-          {title}
-        </Typography>
-        <Typography
-          variant="h5"
-          component="h2"
-          color="primary.contrastText"
-          sx={{
-            fontSize: '3rem',
-            letterSpacing: '0.2em',
-            maxWidth: '600px',
-          }}
-        >
-          {subtitle}
-        </Typography>
+          <Typography
+            variant="h2"
+            component="h1"
+            color="primary.contrastText"
+            sx={{
+              fontFamily: 'kingstonSignature, serif',
+              fontSize: '1.5rem',
+              fontWeight: 'bold',
+              letterSpacing: '0.2em',
+            }}
+          >
+            {title}
+          </Typography>
+          <Typography
+            variant="h5"
+            component="h2"
+            color="primary.contrastText"
+            sx={{
+              fontSize: '3rem',
+              letterSpacing: '0.2em',
+              maxWidth: '600px',
+            }}
+          >
+            {subtitle}
+          </Typography>
+        </Box>
       </Container>
     </Box>
   );
