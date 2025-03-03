@@ -27,7 +27,7 @@ type FAQItem = {
 const FAQS_ITEMS: FAQItem[] = [
   {
     question: 'Where is the wedding taking place?',
-    answer: 'Stonecrop Acres, Morrisburg, ON',
+    answer: 'Stone Crop Acres, Morrisburg, ON',
   },
   {
     question: 'Where should I stay?',
