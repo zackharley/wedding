@@ -4,6 +4,12 @@ import Image from 'next/image';
 import PhotoGallery from './components/PhotoGallery/PhotoGallery';
 import FloralWrapper from '@/components/FloralWrapper';
 import Navbar from '@/components/Navbar';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Kaitlyn & Zackery | Save the Date',
+  description: "Save the Date for Kaitlyn & Zackery's wedding",
+};
 
 export default function Home() {
   return (

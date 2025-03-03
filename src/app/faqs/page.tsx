@@ -15,6 +15,7 @@ import {
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import type { ReactNode } from 'react';
+import { Metadata } from 'next';
 
 type FAQItem = {
   question: string;
@@ -109,6 +110,11 @@ const FAQS_ITEMS: FAQItem[] = [
     ),
   },
 ];
+
+export const metadata: Metadata = {
+  title: 'FAQs | Kaitlyn & Zackery',
+  description: 'Answers to all of your questions about the wedding',
+};
 
 export default function Faqs() {
   const theme = useTheme();
