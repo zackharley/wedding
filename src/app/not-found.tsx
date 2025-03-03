@@ -15,16 +15,24 @@ export default function NotFound() {
           textAlign: 'center',
         }}
       >
-        <Typography variant="h1">404</Typography>
+        <Typography variant="h1" color="primary.contrastText">
+          404
+        </Typography>
         <Typography
           component="h1"
           variant="h2"
           sx={{ mt: 2 }}
           fontFamily="kingstonSignature, serif"
+          color="primary.contrastText"
         >
           Page not found
         </Typography>
-        <Typography component="h2" variant="h6" sx={{ mt: 2 }}>
+        <Typography
+          component="h2"
+          variant="h6"
+          sx={{ mt: 2 }}
+          color="primary.contrastText"
+        >
           Oops! This page wandered off during cocktail hour.
         </Typography>
 
