@@ -4,8 +4,6 @@ import Image from 'next/image';
 import PhotoGallery from './components/PhotoGallery/PhotoGallery';
 import FloralWrapper from '@/components/FloralWrapper';
 import Navbar from '@/components/Navbar';
-import { Metadata } from 'next';
-
 
 export default function Home() {
   return (

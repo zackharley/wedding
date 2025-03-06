@@ -15,7 +15,6 @@ import {
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import type { ReactNode } from 'react';
-import { Metadata } from 'next';
 
 type FAQItem = {
   question: string;
