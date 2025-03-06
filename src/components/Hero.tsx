@@ -68,9 +68,7 @@ export default function Hero({
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center', // Center on mobile
-
           textAlign: 'center', // Center on mobile
-
           color: 'white',
           pb: 4,
         }}
