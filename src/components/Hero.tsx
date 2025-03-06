@@ -67,14 +67,10 @@ export default function Hero({
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          alignItems: {
-            xs: 'center', // Center on mobile
-            md: 'flex-start', // Left aligned on desktop
-          },
-          textAlign: {
-            xs: 'center', // Center on mobile
-            md: 'left', // Left aligned on desktop
-          },
+          alignItems: 'center', // Center on mobile
+
+          textAlign: 'center', // Center on mobile
+
           color: 'white',
           pb: 4,
         }}
