@@ -111,11 +111,6 @@ const FAQS_ITEMS: FAQItem[] = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: 'FAQs | Kaitlyn & Zackery',
-  description: 'Answers to all of your questions about the wedding',
-};
-
 export default function Faqs() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));

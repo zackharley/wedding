@@ -6,10 +6,6 @@ import FloralWrapper from '@/components/FloralWrapper';
 import Navbar from '@/components/Navbar';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Kaitlyn & Zackery | Save the Date',
-  description: "Save the Date for Kaitlyn & Zackery's wedding",
-};
 
 export default function Home() {
   return (
@@ -102,7 +98,7 @@ export default function Home() {
               letterSpacing="0.0875rem"
               sx={{ mb: 4 }}
             >
-              STONECROP ACRES / MORRISBURG ON
+              STONE CROP ACRES / MORRISBURG ON
             </Typography>
             <Image src={flowerDecoration} alt="Flower decoration graphic" />
             <Typography
