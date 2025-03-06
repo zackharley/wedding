@@ -11,7 +11,6 @@ export default function Home() {
       <Container
         sx={{
           display: 'flex',
-          // alignItems: { xs: 'normal', md: 'center' },
           flex: 1,
         }}
       >
