@@ -2,6 +2,15 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
+  async redirects() {
+    return [
+      {
+        source: '/rsvp',
+        destination: 'https://tally.so/r/n0Y8MB',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
