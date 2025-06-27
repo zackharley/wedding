@@ -105,7 +105,7 @@ export default function Home() {
               letterSpacing="0.06875rem"
               sx={{ mt: 4 }}
             >
-              FORMAL INVITATION TO FOLLOW
+              RSVPS ARE EN ROUTE
             </Typography>
           </Box>
         </Box>
