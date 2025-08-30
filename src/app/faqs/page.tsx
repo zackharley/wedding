@@ -26,7 +26,30 @@ type FAQItem = {
 const FAQS_ITEMS: FAQItem[] = [
   {
     question: 'Where is the wedding taking place?',
-    answer: 'Stone Crop Acres, Morrisburg, ON',
+    answer: (
+      <Link
+        href="https://maps.app.goo.gl/VUN4vnVgXXUyCoW39"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Stone Crop Acres, Morrisburg, ON
+      </Link>
+    ),
+  },
+  {
+    question: 'Do you have a registry?',
+    answer: (
+      <>
+        We are so grateful to celebrate this special day with you, and we truly
+        don&apos;t expect any gifts. However, if you&apos;d like to give,
+        contributions will go toward our honeymoon and new furniture for our
+        home. For anyone who prefers a gift, we&apos;ve also put together a
+        small registry with a few meaningful items.
+      </>
+    ),
+    actionHref:
+      'https://www.myregistry.com/wedding-registry/kaitlyn-russell-and-zackery-harley-long-sault-on/4809824',
+    actionText: 'View Registry',
   },
   {
     question: 'Where should I stay?',
@@ -79,18 +102,6 @@ const FAQS_ITEMS: FAQItem[] = [
       </>
     ),
   },
-  // TODO: Add registry
-  // {
-  //   question: 'Do you have a registry?',
-  //   answer: (
-  //     <>
-  //       We are so grateful to celebrate this special day with you, and we truly
-  //       don&apos;t expect any gifts. However, if you feel strongly about giving
-  //       something, we&apos;ve put together a small registry with a few
-  //       meaningful items.
-  //     </>
-  //   ),
-  // },
   {
     question: 'Can I bring my children?',
     answer:
@@ -101,7 +112,7 @@ const FAQS_ITEMS: FAQItem[] = [
     answer: (
       <>
         Not to worry! You can text your questions to Zack at{' '}
-        <Link href="tel:613-662-2394" target="_blank">
+        <Link href="tel:613-662-2394" target="_blank" rel="noopener noreferrer">
           613-662-2394
         </Link>
         .

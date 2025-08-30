@@ -6,6 +6,10 @@ import FloralWrapper from '@/components/FloralWrapper';
 import Navbar from '@/components/Navbar';
 
 export default function Home() {
+  const weddingDate = new Date('2025-09-13');
+  const daysUntilWedding = Math.ceil(
+    (weddingDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24),
+  );
   return (
     <FloralWrapper justifyContent="center" showFooter={false}>
       <Container
@@ -105,7 +109,7 @@ export default function Home() {
               letterSpacing="0.06875rem"
               sx={{ mt: 4 }}
             >
-              RSVPS ARE EN ROUTE
+              {daysUntilWedding} DAYS UNTIL WE SAY &quot;I DO&quot;
             </Typography>
           </Box>
         </Box>
